@@ -1,9 +1,12 @@
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px);
 h1{
   background-color: #336666;
+  font-family: 'Slabo 27px', serif;
 }
 body {
   background-color: #990066;
+
 }
-ul {
+table {
   background-color: #33FF66;
 }
