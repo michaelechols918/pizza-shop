@@ -1,15 +1,10 @@
 var ballard, firstHill, theIntDist, southLakeUnion, ravenna, georgeTown;
-var PizzaLocation;
+
 function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+};
 
-// a object constuctor is a template for a object
-// they enable you to make many objects that have the same propetys and methods
-// declaring an object constructor looks like makeing a new function
-// excepty that we name them with captol letters
 function PizzaLocation(name){
-  // we create properties with the object constructor using this.name = "what ever you want"
   this.name = name;
   this.hourlyLocationData = [];
 }
@@ -17,7 +12,7 @@ function PizzaLocation(name){
 PizzaLocation.prototype.pushHourlyData = function(data){
   this.hourlyLocationData.push(data);
 };
-// we add methods to a object constuctor by adding functions to its prototype
+
 function HourlyData(time, minPizzasSold, maxPizzasSold, minDeliveriesMade, maxDeliveriesMade){
   this.time = time;
   this.pizzasSold = getRandomIntInclusive(minPizzasSold, maxPizzasSold);
@@ -27,10 +22,11 @@ function HourlyData(time, minPizzasSold, maxPizzasSold, minDeliveriesMade, maxDe
 
 this.hourlyLocationData.push(object);
 
-// when we create a new object from this consturctor we have to use the 'new' keyword
 ballard = new PizzaLocation('Ballard');
+
 var eight = new HourlyData('8:00 Am', 0, 3, 1, 7);
 ballard.pushHourlyData(eight);
+
 var nine = new HourlyData('9:00 Am', 0, 3, 1, 7);
 ballard.pushHourlyData(new HourlyData('8:00 Am', 0, 3, 1, 7));
 ballard.pushHourlyData(new HourlyData('9:00 Am', 0, 3, 1, 7));
@@ -52,18 +48,7 @@ ballard.pushHourlyData(new HourlyData('1:00 Am', 8, 15, 6, 16));
 ballard.pushHourlyData(new HourlyData('2:00 Am', 8, 15, 6, 16));
 
 console.log('ballard.HourlyData');
-// Status API Training Shop Blog About
-// how to crate an element..
-// create an element
-// set its attributes
-// set its content
-// add it to the dom
 
-// create a table
-// create a row add it to the table
-// create th/td set there content add them to the row
-
-// take in an array of strings and create a table row with td tags
 function genorateDataRow(inputArray){
   var row = document.createElement('tr');
   var col;
@@ -73,6 +58,7 @@ function genorateDataRow(inputArray){
     row.appendChild(col);
   }
   return row;
+
 }
 function genorateDataRow(inputArray){
   var row = document.createElement('tr');
@@ -83,10 +69,9 @@ function genorateDataRow(inputArray){
     row.appendChild(col);
   }
   return row;
-// create a table
+
 var pizzaTable = document.createElement('ballard');
 
-// create a row with th tags
 var firstRow = genorateHeadingRow(['Time', 'Pizzas sold', 'Pizzas delivered, Drivers recommended']);
 pizzaTable.appendChild(firstRow);
 
