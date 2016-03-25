@@ -9,13 +9,41 @@
   <body>
     <header id="body-header">
     </header>
-    <section>
-      <h1><table id="ballard">Ballard</table></h1>
-      <table id="first-hill">First Hill</table>
-      <table id="int-dist">Int. Dist.</table>
-      <table id="south-lake-union">South Lake Union</table>
-      <table id="george-town">George Town </table>
-      <table id="ravenna">Ravenna</table>
+    <section id="setUpTables">
+      <h1>Pizza Data!</h1>
+<form id="pizza-data-form">
+    <fieldset>
+      <table id="ballardTable">Ballard</table>
+      <table id="firstHillTable">First Hill</table>
+      <table id="intDistTable">Int. Dist.</table>
+      <table id="southLakeUnionTable">South Lake Union</table>
+      <table id="georgeTownTable">George Town </table>
+      <table id="ravennaTable">Ravenna</table>
+<br>
+
+      <legend>Get Pizza Data!</legend>
+
+      <label name="time">time:</label>
+      <input name="Time" type="text">
+
+      <label name="maxSold">max 'zzas sold:</label>
+      <input name="maxSold" type="text">
+
+      <label name="minSold">min 'zzas sold:</label>
+      <input name="minSold" type="text">
+
+      <label name="minDeliv">min deliveries:</label>
+      <input name="minDeliv" type="text">
+
+      <label name="maxDeliv">max deliveries:</label>
+      <input name="maxDeliv" type="text">
+
+      <label name="driversLabel">drivers needed:</label>
+      <input name="driversLabel" type="text">
+
+      <button type="submit">Submit!</button>
+    </fieldset>
+</form>
     </section>
   </body>
   <script src="app.js"></script>

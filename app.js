@@ -1,5 +1,5 @@
 var PizzaLocation = [
-  new PizzaLocation('Ballard'),
+  new PizzaLocation('ballard'),
   new PizzaLocation('first-hill'),
   new PizzaLocation('int-dist'),
   new PizzaLocation('south-lake-union'),
@@ -7,7 +7,7 @@ var PizzaLocation = [
   new PizzaLocation('george-town'),
 ];
 
-for(var i = 0; i < inputArray.length; i++){
+for (var i = 0; i < inputArray.length; i++){
   allStoreData[1].pushHourlyData(
     new HourlyData('8:00 am', 0, 3, 1, 7),
     new HourlyData('9:00 am', 0, 3, 1, 7),
@@ -105,7 +105,6 @@ userTableHeading.textContent = locationName;
 userLocation.appendChild(userTableHeading);
 userLocationSection.appendChild(userTable);
 var locationName = event.target.getlocation.value;
-var firstTime = event.taget.dataTime.value;
 
 var minPizzasSold = event.target.minPizzasSold.value;
 
